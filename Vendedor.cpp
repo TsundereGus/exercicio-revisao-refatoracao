@@ -13,9 +13,9 @@ void Vendedor::print(double hTrab){
   	std::cout << std::endl;
 }
 
-void Vendedor::collectData(string collNome, double collSalario, int collProjetos, double collHTrab){
+void Vendedor::collectData(string collNome, double collSalario, int collQuota, double collHTrab){
   setNome(collNome);
   setSalarioHora(collSalario);
-  setQuotaMensalVendas(collProjetos);
+  setQuotaMensalVendas(collQuota);
   print(collHTrab);
 }
