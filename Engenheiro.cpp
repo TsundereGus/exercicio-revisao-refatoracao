@@ -1,14 +1,15 @@
-#include "Empregado.hpp"
+#include "Engenheiro.hpp"
 
-#define HORAS_DIARIAS 8
+void Engenheiro::print(double hTrab){
+  std::cout << "Nome: " << this->getNome() << std::endl;
+  std::cout << "Salario Mes: " << this->pagamentoMes(hTrab) << std::endl;
+  std::cout << "Projetos: " << getProjetos() << std::endl;  
+  std::cout << std::endl;
+}
 
-double Empregado::pagamentoMes(double horasTrabalhadas){    
-        double salarioMes = horasTrabalhadas;
-        
-        //Cálculo de hora extra (+50% se horasTrabalhadas > 8)
-        if (horasTrabalhadas > HORAS_DIARIAS){
-            double horasExtras = horasTrabalhadas - HORAS_DIARIAS;
-            salarioMes += horasExtras / 2;
-        }
-        return salarioMes * salarioHora;
+void Engenheiro::collectData(string collNome, double collSalario, int collProjetos, double collHTrab){
+  setNome(collNome);
+  setSalarioHora(collSalario);
+  setProjetos(collProjetos);
+  print(collHTrab);
 }
